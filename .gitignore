@@ -1,0 +1,29 @@
+# 依赖
+node_modules/
+
+# 环境变量（严禁提交私钥）
+.env
+.env.local
+.env.*.local
+
+# Hardhat 构建产物
+artifacts/
+cache/
+coverage/
+typechain-types/
+
+# Ignition 部署状态
+ignition/deployments/
+
+# 前端构建产物
+frontend/dist/
+frontend/node_modules/
+
+# 前端环境变量（含 VITE_CONTRACT_ADDRESS 等）
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# 日志与临时文件
+*.log
+.DS_Store

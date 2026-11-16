@@ -1,0 +1,422 @@
+:root {
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger: #dc2626;
+  --ok: #16a34a;
+  --radius: 10px;
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+/* ── 顶栏 ── */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand .logo {
+  font-size: 22px;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.wallet-connected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.balance {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.address {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.wallet-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.wallet-btn:hover {
+  background: var(--primary-hover);
+}
+
+.wallet-btn.switch {
+  background: #f59e0b;
+}
+
+.wallet-btn.danger {
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+/* ── 网络提示 ── */
+.network-banner {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.network-banner.neutral {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.network-banner.warn {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.network-banner.ok {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+/* ── 标签页 ── */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--text-muted);
+  border-radius: 6px;
+}
+
+.tab.active {
+  color: var(--primary);
+  font-weight: 600;
+  background: #eef2ff;
+}
+
+/* ── 卡片/表单 ── */
+.content {
+  min-height: 300px;
+}
+
+.create-form,
+.how-it-works {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.create-form h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.create-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.create-form input,
+.create-form select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.btn {
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn.danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* ── 首页 ── */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+.hero p {
+  opacity: 0.92;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hero .btn.primary {
+  background: #fff;
+  color: #1e3a8a;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.feature {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.feature h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.how-it-works ol {
+  padding-left: 20px;
+  line-height: 2;
+  color: var(--text);
+}
+
+/* ── 交易列表 ── */
+.tx-list {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tx-header,
+.tx-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 90px 1.2fr;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 13px;
+}
+
+.tx-header {
+  background: #f9fafb;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.tx-row {
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.tx-row:hover {
+  background: #f9fafb;
+}
+
+.tx-row a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-block;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-align: center;
+  width: fit-content;
+}
+
+.deadline {
+  color: var(--text-muted);
+}
+
+.tx-detail {
+  border-top: 1px dashed var(--border);
+  padding: 16px;
+  background: #f9fafb;
+}
+
+.tx-detail .desc {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.tx-result {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.tx-result a {
+  color: var(--primary);
+}
+
+.tx-result .ok {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.empty {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 48px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* ── 页脚 ── */
+.footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.footer a {
+  color: var(--primary);
+  word-break: break-all;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+  .tx-header {
+    display: none;
+  }
+  .tx-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .hero h1 {
+    font-size: 22px;
+  }
+}

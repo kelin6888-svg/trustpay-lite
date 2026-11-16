@@ -1,0 +1,26 @@
+{
+  "name": "trustpay-lite",
+  "version": "1.0.0",
+  "description": "A Simple On-chain Escrow Payment dApp on Monad Testnet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:testnet": "hardhat ignition deploy ignition/modules/TrustPayEscrow.ts --network monadTestnet"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.1.10",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.7",
+    "@openzeppelin/contracts": "^5.6.1",
+    "@types/node": "^26.6.6",
+    "hardhat": "^3.22.0",
+    "typescript": "^7.0.2",
+    "viem": "^2.57.20"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10"
+  }
+}
